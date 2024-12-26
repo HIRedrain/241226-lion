@@ -1,0 +1,11 @@
+# ./.github/workflows/workflow_call_demo.yml
+
+name: Workflows Names - github-action-workflow_call-01
+run-name: Runs Names - github-action-workflow_call-01 🚀
+on: workflow_dispatch
+
+jobs:
+  Jobs-Names-github-action-workflow_call-01:
+    uses: ./.github/workflows/github-action-workflow_call.yml # 어떤 자원을 이용 => 사용?
+    with:
+      environment: production
