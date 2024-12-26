@@ -2,19 +2,13 @@ name: Repository variable test
 
 on:
   workflow_dispatch
-
-env:
-  DAY_OF_WEEK: Thursday  # workflow-level 환경 변수 설정
-
+  
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
-    env:
-      Greeting: Hello
-      DAY_OF_WEEKS: ${{ vars.DAY_OF_WEEKS }}  # Repository secret 또는 variable로 설정된 값 사용
     steps:
       - name: "Say Hello GithubActions it's Thursday"
-        if: ${{ env.DAY_OF_WEEKS == 'MONDAY' }}  # 환경 변수 비교
-        run: echo "Today is ${{ env.DAY_OF_WEEKS }}!"
+        if: ${{ vars.DAY_OF_WEEKS == 'MONDAY' }}  # 환경 변수 비교
+        run: echo "Today is ${{ vars.DAY_OF_WEEKS }}!"
         env:
           First_Name: GithubActions
