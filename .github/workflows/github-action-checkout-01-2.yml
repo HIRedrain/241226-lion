@@ -9,4 +9,4 @@ jobs:
         with:
           repository: actions/checkout
           ref: v3
-      - run: echo "${{ CHANGELOG.md }}"
+      - run: cat CHANGELOG.md
