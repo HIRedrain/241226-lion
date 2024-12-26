@@ -1,13 +1,10 @@
 name: Repository variable test
-
-on:
-  workflow_dispatch
+on: workflow_dispatch
   
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
     steps:
-      - name: "Say Hello GithubActions it's Thursday"
-        if: ${{ vars.DAY_OF_WEEKS == 'MONDAY' }}  # 환경 변수 비교
+      - name: "Say Hello GithubActions it's MONDAY"
         run: echo "Today is ${{ vars.DAY_OF_WEEKS }}!"
 
