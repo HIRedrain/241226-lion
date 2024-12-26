@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Say Hello VAR_TEST"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK !"
+        run: echo "$Hello ${{ vars.VARS_TEST }}"
 
         
