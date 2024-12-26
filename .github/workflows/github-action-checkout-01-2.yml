@@ -1,4 +1,4 @@
-name: Checkout Workflow
+name: Checkout Workflow 1-2
 on: workflow_dispatch
 jobs:
   checkout:
