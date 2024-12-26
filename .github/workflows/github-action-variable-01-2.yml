@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: "Say Hello GithubActions it's Thursday"
         if: ${{ env.DAY_OF_WEEKS == 'MONDAY' }} 
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEKS!"
+        run: echo "Today is ${{ DAY_OF_WEEKS }}!"
         env:
           First_Name: GithubActions
 
