@@ -6,5 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Say Hello GithubActions it's MONDAY"
-        run: echo "$Hello ${{ vars.DAY_OF_WEEKS }}!"
+        run: echo "Today is ${{ vars.DAY_OF_WEEKS }}!"
 
